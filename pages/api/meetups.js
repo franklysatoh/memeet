@@ -5,6 +5,7 @@ async function handlerGetMeetup(req, res) {
     const client = await MongoClient.connect(
       "mongodb+srv://admin:1234@cluster0.onkpv.mongodb.net/meetups?retryWrites=true&w=majority"
     );
+    
     const db = client.db();
 
     const meetupsCollection = db.collection("meetups");
